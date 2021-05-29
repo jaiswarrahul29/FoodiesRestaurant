@@ -14,13 +14,22 @@
     <title>Admin-Foddies Restraunts</title>
 </head>
 <body>
+    
     <div class="main-content">
+        <!------------------------- login panel---------------------------------------- -->
+        <div class="loginpanel" id="adminloginpanel">
+            <input type="email" placeholder="Enter Email" id="adminemail">
+            <input type="password" placeholder="Enter Password" id="adminpassword">
+            <button id="adminloginbutton">Login</button>
+        </div>
 
+        <!-------------------- head section---------------------------------------- -->
         <div class="head-section">
            <h1> <img src="../image/cutlery.png" alt=""> Admin - Foodies<span>Restraunts</span></h1>
 
          </div>
 
+         <!--------------------------- tab section---------------------------------------- -->
         <div class="tab-section">
             <button class="tablink" onclick="openPage('Home', this, 'orange')" id="defaultOpen">Manage User</button>
             <button class="tablink" onclick="openPage('News', this, 'orange')" >Manage product Item</button>

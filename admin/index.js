@@ -12,6 +12,51 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+//---------------login script--------------------------------------------------
+
+    // hiding login panel function
+    var loginpanel = document.getElementById('adminloginpanel');
+    function hideLoginPanel(){
+        loginpanel.style.visibility="hidden"
+    }
+
+    //login function----------------------------------------------------------------
+    var adminloginbutton = document.getElementById('adminloginbutton');
+    adminloginbutton.addEventListener('click',()=>{
+        var adminEmail = document.getElementById('adminemail').value
+        var adminpassword = document.getElementById('adminpassword').value
+
+        firebase.auth().signInWithEmailAndPassword(adminEmail, adminpassword)
+            .then((userCredential) => {
+                //--Signin Successfull
+
+                //hidding the login panel
+                hideLoginPanel()
+
+                //comment popup
+                swal("Welcome Admin", "", "success");
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+
+                swal(errorMessage, "", "error");
+
+            });
+        
+    })
+
+    //onstate change function here
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            var useremail = firebase.auth().currentUser.email
+            if(useremail == "admin@admin.com"){
+                hideLoginPanel()
+            }
+            else{}
+        } else {}
+    });
+
 
 //------------------tabs script-----------------------------------------------
 
