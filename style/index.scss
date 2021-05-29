@@ -713,68 +713,8 @@ html,body{
 }
 
 
-// mobile responsible start here at 2000px
-@media screen and (max-width: 2000px){
-    #hamburger{
-            display: block;
-        }
 
-    #right_content{
-        position: absolute;
-        top: -20px;
-        width: 100%;
-        height: 110vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color:white;
-        visibility: hidden;
-        margin-left: -5px;
-        transition: .3s;
-        ul{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-
-            a{
-                margin: 10px 0;
-            }
-        }
-
-        .buttons{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            a{
-                margin: 10px 0;
-            }
-        }
-
-        .cross-btn{
-            display: block;
-            position: absolute;
-            top: 30px;
-            right: 10px;
-            cursor: pointer;
-            border-radius: 50px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-            i{
-                font-size: 20px;
-                padding: .8rem;
-                margin: 0 3px;
-            }
-
-        }
-
-    }
-}
-//add to cart css here 
+//add to cart css here ----------------------------------------------------------------------------------------------------------------------
 .atc-icon{
     position: fixed;
     bottom: 20px;
@@ -800,6 +740,7 @@ html,body{
     z-index: 20;
     visibility: visible;
     color: #1f1f1f;
+    overflow-y: scroll;
     .cancleiconcart{
         position: absolute;
         right: 20px;
@@ -822,6 +763,7 @@ html,body{
 
     .main-cart{
         margin-top:6rem;
+        margin-bottom: 1rem;
         padding: 0 3rem;
         position: relative;
 
@@ -906,6 +848,67 @@ html,body{
     }
 
 
+}
+// mobile responsible start here at 2000px------------------------------------------------------------------------------------------
+@media screen and (max-width: 2000px){
+    #hamburger{
+            display: block;
+        }
+
+    #right_content{
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        visibility: hidden;
+        margin-left: -5px;
+        transition: .3s;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            a{
+                margin: 10px 0;
+            }
+        }
+
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a{
+                margin: 10px 0;
+            }
+        }
+
+        .cross-btn{
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            i{
+                font-size: 20px;
+                padding: .8rem;
+                margin: 0 3px;
+            }
+
+        }
+
+    }
 }
 // 400px responsible
 @media screen and (max-width: 400px){
