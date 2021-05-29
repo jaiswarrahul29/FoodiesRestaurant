@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- fontawesome cnd -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+        <!-- sweetalert cnd -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Admin-Foddies Restraunts</title>
+</head>
+<body>
+    <div class="main-content">
+
+        <div class="head-section">
+           <h1> <img src="../image/cutlery.png" alt=""> Admin - Foodies<span>Restraunts</span></h1>
+
+         </div>
+
+        <div class="tab-section">
+            <button class="tablink" onclick="openPage('Home', this, 'orange')" id="defaultOpen">Manage User</button>
+            <button class="tablink" onclick="openPage('News', this, 'orange')" >Manage product Item</button>
+            <button class="tablink" onclick="openPage('Contact', this, 'orange')">Manage Reserve table</button>
+            <button class="tablink" onclick="openPage('About', this, 'orange')" >Manage Orders</button>
+
+            <!--------- manage user tabs ------------------------------------------>
+            <div id="Home" class="tabcontent">
+
+                <div class="input-model">
+                    <input type="email" id="inputemail" placeholder="Email">
+                    <input type="text" id="inputpassword" placeholder="Password">
+                    <button id="addUserData">Add User</button>
+                    
+                </div>
+                <table>
+                    <tbody id="manageUserData">
+                        <tr>
+                            <td style="font-weight: 600;">User Email Address</td>
+                            <td style="font-weight: 600;"> User Password</td>
+                        </tr>
+
+                        <!-- EXAMPLE OF GETTING DATA -->
+                        <!-- <tr>
+                            <td>jaiswarrahul@gmail.com</td>
+                            <td>Password</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+            </div>
+            <!--------- manage product item tabs ------------------------------------------>
+            <div id="News" class="tabcontent">
+                <div class="productManagementContent">
+
+                    <!-- product input content -->
+                    <div class="productManagementInputItem">
+                        <input type="text" placeholder=" Product Image Link*" id="productImageSrc">
+                        <input type="text" placeholder="Product Name*" id="productName">
+                        <input type="number" placeholder="Prduct Price*" id="productPrice">
+                        <select name="Select Category" id="productCategory">
+                            <option value="all">All</option>
+                            <option value="starter">Starter</option>
+                            <option value="mainCourse">Main Course</option>
+                            <option value="desserts">Desserts</option>
+                        </select>
+                        <button id="addItemToMenuButton">Add Item</button>
+                    </div>
+
+                    <div class="productItemList">
+                        <table>
+                            <tr>
+                                <td>Product Image</td>
+                                <td>Product Name</td>
+                                <td>Product Price</td>
+                                <td>Sort By
+                                    <select name="Select Category" id="productItemCategory" >
+                                        <option>Select</option>
+                                        <option value="all">All</option>
+                                        <option value="starter">Starter</option>
+                                        <option value="mainCourse">Main Course</option>
+                                        <option value="desserts">Desserts</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tbody id="menuItemProductList">
+                                
+                                <!-- <tr>
+                                    <td><img src='https://b.zmtcdn.com/data/dish_photos/e22/b608926e5d48643c2285c85389e5ae22.jpg'></td>
+                                    <td>Chicken Biryani</td>
+                                    <td>₹100</td>
+                                    <td></td>
+                                </tr> -->
+
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--------- manage reserve table tabs ------------------------------------------>
+            <div id="Contact" class="tabcontent">
+
+                <div class="reservetable" id="reservetable">
+                    <!-- <div class="model">
+                        <p>Date: 2021-05-27</p>
+                        <p>Email: jaiswarrahul66@gmail.com</p>
+                        <p>Name: Umesh Jaiswar</p>
+                        <p>Number: 2356595626566</p>
+                        <p>Person: 5</p>
+                        <p>Time: 15:48</p>
+
+                    </div> -->
+                    
+                </div>
+            </div>
+            <!--------- manage orders tabs ------------------------------------------>    
+            <div id="About" class="tabcontent">
+                <div class="manageOrderDetails"  id="orderInformations">
+                    <table>
+                        <tbody style="background-color: #db2d01;">
+                            
+
+                            <tr>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>address</td>
+                                <td>phone number</td>
+                                <td>pincode</td>
+                            </tr>
+                            
+                        </tbody>
+
+                        <tbody class="manageproductlistItem" style="background-color: #e85d04;">
+                            
+                        
+                            <tr>
+                                <td>Product Name</td>
+                                <td>Product Quantity</td>
+                                <td>Product Price</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+        <script  src="./index.js"></script>
+</body>
+</html>

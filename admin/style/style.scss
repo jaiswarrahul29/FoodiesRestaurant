@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+html,body{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.main-content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    .head-section{
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        background: white;
+
+
+        h1{
+            font-size: 22px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img{
+                width: 42px;
+                height: 42px;
+                margin-right: 10px;
+            }
+        }
+
+
+    }
+
+    .tab-section{
+            width: 100%;
+            height: 100%;
+            margin-top: 65px;
+
+            .tablink{
+                background-color: rgba(255, 166, 0, 0.5);
+                color: #1f1f1f;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 25%;
+
+                :hover{
+                    background-color: #777;
+                }
+            }
+            .tabcontent{
+                color: white;
+                display: none;
+                margin-top: auto;
+                height: 100%;
+                margin-top: 52px;
+                padding: 2rem 0;
+
+                .input-model{
+                    width: 100%;
+                    height: 2.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding-top: 10px;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    input{
+                        width: 300px;
+                        padding: .5rem 1rem;
+                        margin: 0 10px;
+                        border: 1px solid #1f1f1f52;
+                        border-radius: 5px;
+                    }
+                    button{
+                        cursor: pointer;
+                        padding: .5rem 1rem;
+                        margin: 0 10px;
+                        border: 1px solid #1f1f1f52;
+                        border-radius: 5px;
+                        background-color: rgb(219, 45, 1);
+                        color: white;
+
+                    }
+                    p{
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    
+                }
+
+                //manage user table 
+                    table{
+                        width: 80%;
+                        border-collapse: collapse;
+                        margin: 0 8rem;
+                        padding: 2rem 0 ;
+
+                        td, th {
+                            border: 2px solid #dddddd81;
+                            text-align: left;
+                            padding: 8px;
+                            padding-left: 1rem;
+                            color: white;
+                            font-weight: 500;
+                            letter-spacing: 1px;
+
+                        }
+                        .manageUserData{
+                            width: 100%;
+
+                            tr{
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                //PRODUCT ITEM LIST
+                .productManagementContent{
+
+                    #itemInputCommentText{
+                        text-align: center;
+                        font-size: 15px;
+                        letter-spacing: 2px;
+                    }
+
+                    .productManagementInputItem{
+                        width: 100%;
+                        margin: 1rem 0;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        input,select,button{
+                            margin: 0 10px;
+                        }
+
+                        input,select,button{
+                            padding: .5rem;
+                            border-radius: 3px;
+                            border: 1px solid rgba(70, 69, 69, 0.507);
+                            font-size: 14px;
+                        }
+                    
+                        button{
+                            background-color:rgb(219, 45, 1) ;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                    .productItemList{
+                        table{
+                            tbody{
+                                tr{
+                                    text-transform: capitalize;
+                                    td{
+                                        img{
+                                            width: 50px;
+                                            height: 50px;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                }
+                }
+                
+
+
+                //manage resertable 
+
+                .reservetable{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .model{
+                        margin: 1rem;
+                        width: auto;
+                        height: auto;
+                        background-color: rgba(255, 255, 255, 0.4);
+                        color: #1f1f1f;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2rem 1.5rem;
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                        cursor: pointer;
+
+                        P{
+                            font-size: 15px;
+                            text-align: center;
+                            margin: 5px 0;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+//----------------manage order details here
+                .manageOrderDetails{
+                    width: 100%;
+                    height: 100%;
+                    
+                    table{
+                        background-color: transparent;
+                        margin: 10px auto;
+                    }
+                }
+
+            }
+
+             #home,#news,#Contact,#About{
+                    background-color: orange;
+                }
+        }
+}
+
+@media screen and (max-width: 900px) {
+    .main-content .tab-section .tablink{
+        height: 80px;
+    }
+    .main-content .tab-section .tabcontent {
+        margin-top: 80px;
+    }
+
+    .main-content .tab-section .tabcontent .input-model input {
+        width: 200px;
+    }
+
+    .main-content .tab-section .tabcontent .productManagementContent .productManagementInputItem {
+        flex-direction: column;
+    }
+    .main-content .tab-section .tabcontent .productManagementContent .productManagementInputItem input{
+        margin-top: 5px;
+    }
+    .main-content .tab-section .tabcontent .productManagementContent .productManagementInputItem select{
+        margin: 5px 10px;
+    }
+
+    .main-content .tab-section .tabcontent table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 0 5rem;
+        padding: 2rem 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .main-content .tab-section .tabcontent .manageOrderDetails {
+        table{
+            tbody{
+                    tr{
+                        td{
+                            font-size: 13px;
+                        }
+                    }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .main-content .tab-section .tablink{
+        font-size: 15px;
+    }
+
+    .main-content .tab-section .tabcontent .input-model{
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+    .main-content .tab-section .tabcontent .input-model input {
+        width: 80%;
+        margin: 5px;
+    }
+    .main-content .tab-section .tabcontent .input-model button {
+        width: 80%;
+    }
+
+    .main-content .tab-section .tabcontent table {
+        width: 80%;
+        margin: 4rem 4rem;
+    }
+
+    .main-content .tab-section .tabcontent .productManagementContent .productItemList{
+        margin:-2rem 1rem;
+    }
+    .main-content .tab-section .tabcontent .reservetable .model P {
+        font-size: 13px;
+    }
+
+    .main-content .tab-section .tabcontent .manageOrderDetails {
+        table{
+            tbody{
+                    tr{
+                        td{
+                            font-size: 12px;
+                        }
+                    }
+            }
+        }
+    }
+    .main-content .tab-section .tabcontent .manageOrderDetails {
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-content .head-section h1 {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .main-content .head-section h1 img {
+        width: 35px;
+        height: 35px;
+    }
+    .main-content .tab-section .tablink{
+        font-size: 14px;
+    }
+    .main-content .tab-section .tablink{
+        height: 95px;
+    }
+    .main-content .tab-section .tabcontent {
+        margin-top: 95px;
+    }
+
+    .main-content .tab-section .tabcontent table {
+        margin: 4rem 1.5rem;
+    }
+    .main-content .tab-section .tabcontent table td{
+        font-size: 13px;
+    }
+    .main-content .tab-section .tabcontent .productManagementContent .productItemList{
+        width: 100%;
+        margin: -2rem -1rem;
+    }
+    .main-content .tab-section .tabcontent .productManagementContent .productItemList select{
+        font-size: 11px;
+        width: 60px;
+    }
+
+}
